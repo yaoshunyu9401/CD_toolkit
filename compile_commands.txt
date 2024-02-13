@@ -1,0 +1,147 @@
+
+#rm data_config.so
+cython data_config.py
+gcc -c -fPIC -I ${env_path} data_config.c
+gcc -shared data_config.o -o data_config.so
+#rm data_config.py data_config.o data_config.c
+
+
+#rm image_forwrd_.so
+cython image_forwrd_.py
+gcc -c -fPIC -I ${env_path} image_forwrd_.c
+gcc -shared image_forwrd_.o -o image_forwrd_.so
+#rm image_forwrd_.py image_forwrd_.o image_forwrd_.c
+
+
+#rm mycompile.so
+cython mycompile.py
+gcc -c -fPIC -I ${env_path} mycompile.c
+gcc -shared mycompile.o -o mycompile.so
+#rm mycompile.py mycompile.o mycompile.c
+
+
+#rm utils.so
+cython utils.py
+gcc -c -fPIC -I ${env_path} utils.c
+gcc -shared utils.o -o utils.so
+#rm utils.py utils.o utils.c
+
+
+#rm datasets\CD_dataset.so
+cython datasets\CD_dataset.py
+gcc -c -fPIC -I ${env_path} datasets\CD_dataset.c
+gcc -shared datasets\CD_dataset.o -o datasets\CD_dataset.so
+#rm datasets\CD_dataset.py datasets\CD_dataset.o datasets\CD_dataset.c
+
+
+#rm datasets\data_utils.so
+cython datasets\data_utils.py
+gcc -c -fPIC -I ${env_path} datasets\data_utils.c
+gcc -shared datasets\data_utils.o -o datasets\data_utils.so
+#rm datasets\data_utils.py datasets\data_utils.o datasets\data_utils.c
+
+
+#rm misc\imutils.so
+cython misc\imutils.py
+gcc -c -fPIC -I ${env_path} misc\imutils.c
+gcc -shared misc\imutils.o -o misc\imutils.so
+#rm misc\imutils.py misc\imutils.o misc\imutils.c
+
+
+#rm misc\logger_tool.so
+cython misc\logger_tool.py
+gcc -c -fPIC -I ${env_path} misc\logger_tool.c
+gcc -shared misc\logger_tool.o -o misc\logger_tool.so
+#rm misc\logger_tool.py misc\logger_tool.o misc\logger_tool.c
+
+
+#rm misc\metric_tool.so
+cython misc\metric_tool.py
+gcc -c -fPIC -I ${env_path} misc\metric_tool.c
+gcc -shared misc\metric_tool.o -o misc\metric_tool.so
+#rm misc\metric_tool.py misc\metric_tool.o misc\metric_tool.c
+
+
+#rm misc\pyutils.so
+cython misc\pyutils.py
+gcc -c -fPIC -I ${env_path} misc\pyutils.c
+gcc -shared misc\pyutils.o -o misc\pyutils.so
+#rm misc\pyutils.py misc\pyutils.o misc\pyutils.c
+
+
+#rm misc\torchutils.so
+cython misc\torchutils.py
+gcc -c -fPIC -I ${env_path} misc\torchutils.c
+gcc -shared misc\torchutils.o -o misc\torchutils.so
+#rm misc\torchutils.py misc\torchutils.o misc\torchutils.c
+
+
+#rm models\basic_model.so
+cython models\basic_model.py
+gcc -c -fPIC -I ${env_path} models\basic_model.c
+gcc -shared models\basic_model.o -o models\basic_model.so
+#rm models\basic_model.py models\basic_model.o models\basic_model.c
+
+
+#rm models\evaluator.so
+cython models\evaluator.py
+gcc -c -fPIC -I ${env_path} models\evaluator.c
+gcc -shared models\evaluator.o -o models\evaluator.so
+#rm models\evaluator.py models\evaluator.o models\evaluator.c
+
+
+#rm models\help_funcs.so
+cython models\help_funcs.py
+gcc -c -fPIC -I ${env_path} models\help_funcs.c
+gcc -shared models\help_funcs.o -o models\help_funcs.so
+#rm models\help_funcs.py models\help_funcs.o models\help_funcs.c
+
+
+#rm models\losses.so
+cython models\losses.py
+gcc -c -fPIC -I ${env_path} models\losses.c
+gcc -shared models\losses.o -o models\losses.so
+#rm models\losses.py models\losses.o models\losses.c
+
+
+#rm models\networks.so
+cython models\networks.py
+gcc -c -fPIC -I ${env_path} models\networks.c
+gcc -shared models\networks.o -o models\networks.so
+#rm models\networks.py models\networks.o models\networks.c
+
+
+#rm models\resnet.so
+cython models\resnet.py
+gcc -c -fPIC -I ${env_path} models\resnet.c
+gcc -shared models\resnet.o -o models\resnet.so
+#rm models\resnet.py models\resnet.o models\resnet.c
+
+
+#rm MyDataProcess\crop_size.so
+cython MyDataProcess\crop_size.py
+gcc -c -fPIC -I ${env_path} MyDataProcess\crop_size.c
+gcc -shared MyDataProcess\crop_size.o -o MyDataProcess\crop_size.so
+#rm MyDataProcess\crop_size.py MyDataProcess\crop_size.o MyDataProcess\crop_size.c
+
+
+#rm MyDataProcess\get_list.so
+cython MyDataProcess\get_list.py
+gcc -c -fPIC -I ${env_path} MyDataProcess\get_list.c
+gcc -shared MyDataProcess\get_list.o -o MyDataProcess\get_list.so
+#rm MyDataProcess\get_list.py MyDataProcess\get_list.o MyDataProcess\get_list.c
+
+
+#rm MyDataProcess\merge_code.so
+cython MyDataProcess\merge_code.py
+gcc -c -fPIC -I ${env_path} MyDataProcess\merge_code.c
+gcc -shared MyDataProcess\merge_code.o -o MyDataProcess\merge_code.so
+#rm MyDataProcess\merge_code.py MyDataProcess\merge_code.o MyDataProcess\merge_code.c
+
+
+#rm MyDataProcess\result_process.so
+cython MyDataProcess\result_process.py
+gcc -c -fPIC -I ${env_path} MyDataProcess\result_process.c
+gcc -shared MyDataProcess\result_process.o -o MyDataProcess\result_process.so
+#rm MyDataProcess\result_process.py MyDataProcess\result_process.o MyDataProcess\result_process.c
+
