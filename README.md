@@ -1,10 +1,10 @@
-# Transformers±ä»¯¼ì²âÍøÂçÄ£ÐÍÑÝÊ¾ËµÃ÷
+# Transformerså˜åŒ–æ£€æµ‹ç½‘ç»œæ¨¡åž‹æ¼”ç¤ºè¯´æ˜Ž
 
-## ÑÝÊ¾ÎÊÌâµÄÁªÏµÈË
+## æ¼”ç¤ºé—®é¢˜çš„è”ç³»äºº
 
-Õâ¸ö³ÌÐòÊµÏÖÁË×Ô¶¯»¯²Ã¼ô£¬Ê¶±ð£¬Æ´½Ó²¢×ª»¯ÎªshpÎÄ¼þ£¬ÆäºËÐÄÊÇTransformersÄ£ÐÍ
+è¿™ä¸ªç¨‹åºå®žçŽ°äº†è‡ªåŠ¨åŒ–è£å‰ªï¼Œè¯†åˆ«ï¼Œæ‹¼æŽ¥å¹¶è½¬åŒ–ä¸ºshpæ–‡ä»¶ï¼Œå…¶æ ¸å¿ƒæ˜¯Transformersæ¨¡åž‹
 
-³ÌÐò³öÏÖbugÇëÁªÏµyaoshunyu9401@gmail.com
+ç¨‹åºå‡ºçŽ°bugè¯·è”ç³»yaoshunyu9401@gmail.com
 
 
 ![image](./images/network.png)
@@ -19,58 +19,58 @@ einops  0.6.1
 gdal  3.4.3
 tifffile 
 
-## Êý¾ÝËµÃ÷
-Êý¾Ý¼¯ÄÚÓÐÁ½¸öÇøÏØ2022ÄêºÍ2023ÄêµÄÒ£¸ÐÓ°Ïñ£¬»¹ÓÐIWHR_dataÊý¾Ý¼¯¡£Êý¾Ý¼¯·ÖÏíÁ´½ÓÈçÏÂ
+## æ•°æ®è¯´æ˜Ž
+æ•°æ®é›†å†…æœ‰ä¸¤ä¸ªåŒºåŽ¿2022å¹´å’Œ2023å¹´çš„é¥æ„Ÿå½±åƒï¼Œè¿˜æœ‰IWHR_dataæ•°æ®é›†ã€‚æ•°æ®é›†åˆ†äº«é“¾æŽ¥å¦‚ä¸‹
 
-Á´½Ó£ºhttps://pan.baidu.com/s/1lh1yuX_DC7M9tpKl2S_s8A 
-ÌáÈ¡Âë£º4cix
+é“¾æŽ¥ï¼šhttps://pan.baidu.com/s/1lh1yuX_DC7M9tpKl2S_s8A 
+æå–ç ï¼š4cix
 
-### Êý¾Ý×¼±¸
+### æ•°æ®å‡†å¤‡
 
 ```
 """
-Á½ÆÚÓ°ÏñµÄÎÄ¼þ¼ÐÔÚdatesetÄÚ£»
-©À©¤T1
-©À©¤T2
-©À©¤label
-©¸©¤crop_256
+ä¸¤æœŸå½±åƒçš„æ–‡ä»¶å¤¹åœ¨datesetå†…ï¼›
+â”œâ”€T1
+â”œâ”€T2
+â”œâ”€label
+â””â”€crop_256
 """
 ```
 `T1`: t1 phase;
 
 `T2`: t2 phase;
 
-`label`: label maps, Èç¹ûÖ´ÐÐÔ¤²âÔÚ´ËÎÄ¼þ¼ÐÏÂ·ÅÈëÃû³ÆÓëT1ºÍT2Í¬ÃûµÄÍ¼ÏñÎÄ¼þ
-£¬ÐÐÁÐ´óÐ¡ÓëT1ºÍT2Í¬ÃûµÄÍ¼ÏñÎÄ¼þÒ»ÖÂ£¬´ËÍ¼Ïñ²»²ÎÓëÔ¤²â;
+`label`: label maps, å¦‚æžœæ‰§è¡Œé¢„æµ‹åœ¨æ­¤æ–‡ä»¶å¤¹ä¸‹æ”¾å…¥åç§°ä¸ŽT1å’ŒT2åŒåçš„å›¾åƒæ–‡ä»¶
+ï¼Œè¡Œåˆ—å¤§å°ä¸ŽT1å’ŒT2åŒåçš„å›¾åƒæ–‡ä»¶ä¸€è‡´ï¼Œæ­¤å›¾åƒä¸å‚ä¸Žé¢„æµ‹;
 
 `crop_256`: contains `A, B, label, List and predict`, 
-´ËÎÄ¼þ¼Ð¼°ÆäÄÚÈÝ¿ÉÒÔ×Ô¶¯Éú³É£¬×îÖÕÔ¤²â½á¹ûµÄshpÎÄ¼þÒ²»á·ÅÔÚ´ËÎÄ¼þ¼ÐÏÂ.
+æ­¤æ–‡ä»¶å¤¹åŠå…¶å†…å®¹å¯ä»¥è‡ªåŠ¨ç”Ÿæˆï¼Œæœ€ç»ˆé¢„æµ‹ç»“æžœçš„shpæ–‡ä»¶ä¹Ÿä¼šæ”¾åœ¨æ­¤æ–‡ä»¶å¤¹ä¸‹.
 
-### Êý¾Ý¼¯½á¹¹
+### æ•°æ®é›†ç»“æž„
 
 ```
 """
-Change detection data set with pixel-level binary labels£»
-©À©¤A
-©À©¤B
-©À©¤label
-©¸©¤list
+Change detection data set with pixel-level binary labelsï¼›
+â”œâ”€A
+â”œâ”€B
+â”œâ”€label
+â””â”€list
 """
 ```
 
 
-## ÔËÐÐ½Å±¾ËµÃ÷
+## è¿è¡Œè„šæœ¬è¯´æ˜Ž
 
 ### Predict
 
-ÔÚÎÄ¼þ¼ÐÏÂ`scripts`ÕÒµ½ÑµÁ·½Å±¾`run_server.sh` , Õâ¸ö½Å±¾¼¯ºÏÁË×Ô¶¯²Ã¼ô£¬
-»ñÈ¡²Ã¼ôºóµÄÍ¼Æ¬ÁÐ±í£¬¶ÁÈ¡Êý¾Ý²¢½øÐÐÇ°Ïò´«²¥Ô¤²â£¬¶ÔÔ¤²âºóµÄÍ¼°ß¸³Óè×ø±êÆ´½Ó£¬²¢
-×ª»¯ÎªshpÎÄ¼þ£¬¹ýÂËµô½ÏÐ¡µÄÍ¼°ß£¬ÊµÏÖ¶ÔÒ£¸ÐÓ°ÏñµÄ×Ô¶¯»¯Í¼°ßÌáÈ¡´¦Àí
+åœ¨æ–‡ä»¶å¤¹ä¸‹`scripts`æ‰¾åˆ°è®­ç»ƒè„šæœ¬`run_server.sh` , è¿™ä¸ªè„šæœ¬é›†åˆäº†è‡ªåŠ¨è£å‰ªï¼Œ
+èŽ·å–è£å‰ªåŽçš„å›¾ç‰‡åˆ—è¡¨ï¼Œè¯»å–æ•°æ®å¹¶è¿›è¡Œå‰å‘ä¼ æ’­é¢„æµ‹ï¼Œå¯¹é¢„æµ‹åŽçš„å›¾æ–‘èµ‹äºˆåæ ‡æ‹¼æŽ¥ï¼Œå¹¶
+è½¬åŒ–ä¸ºshpæ–‡ä»¶ï¼Œè¿‡æ»¤æŽ‰è¾ƒå°çš„å›¾æ–‘ï¼Œå®žçŽ°å¯¹é¥æ„Ÿå½±åƒçš„è‡ªåŠ¨åŒ–å›¾æ–‘æå–å¤„ç†
 
-¿ÉÒÔÔÚterminalÖÐÔËÐÐ `sh scripts/run_server.sh` (×¢Òâ£º¼ì²épython»·¾³ºÍÂ·¾¶£¬Â·¾¶
-ÒªºÍpythonÏîÄ¿Ò»ÖÂ).
+å¯ä»¥åœ¨terminalä¸­è¿è¡Œ `sh scripts/run_server.sh` (æ³¨æ„ï¼šæ£€æŸ¥pythonçŽ¯å¢ƒå’Œè·¯å¾„ï¼Œè·¯å¾„
+è¦å’Œpythoné¡¹ç›®ä¸€è‡´).
 
-`run_server.sh` ÄÚÏêÏ¸ÄÚÈÝÈçÏÂ:
+`run_server.sh` å†…è¯¦ç»†å†…å®¹å¦‚ä¸‹:
 
 ```cmd
 #!/usr/bin/env bash
@@ -92,37 +92,3 @@ python MyDataProcess/result_process.py ./dataset/crop_256
 echo $(date +%T)
 
 ```
-
-
-
-
-- ÏîÄ¿¸ùÄ¿Â¼
-  - ½Å±¾ÎÄ¼þ.py
-  - Ç°ÆÚÎÄ¼þ¼Ð
-    - ×ÓÎÄ¼þ¼Ð1
-      - Êý¾ÝÎÄ¼þ1
-      - Êý¾ÝÎÄ¼þ2
-      ...
-    - ×ÓÎÄ¼þ¼Ð2
-      - Êý¾ÝÎÄ¼þ1
-      - Êý¾ÝÎÄ¼þ2
-      ...
-    ...
-  - ºóÆÚÎÄ¼þ¼Ð
-    - ×ÓÎÄ¼þ¼Ð1
-      - Êý¾ÝÎÄ¼þ1
-      - Êý¾ÝÎÄ¼þ2
-      ...
-    - ×ÓÎÄ¼þ¼Ð2
-      - Êý¾ÝÎÄ¼þ1
-      - Êý¾ÝÎÄ¼þ2
-      ...
-    ...
-    -LEVIR
-      - datasetÎÄ¼þ¼Ð
-        - T1ÎÄ¼þ¼Ð
-        - T2ÎÄ¼þ¼Ð
-        - crop_256ÎÄ¼þ¼Ð
-          - shpÎÄ¼þ1
-          - shpÎÄ¼þ2
-          ...
