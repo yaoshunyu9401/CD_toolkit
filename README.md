@@ -1,6 +1,10 @@
 # Transformers变化检测网络模型说明（change detection）
 
 ## 程序说明
+该存储库包含复制论文所需的所有代码：
+A Renovated Framework of a Convolution Neural Network with Transformer for Detecting Surface Changes from High-Resolution Remote-Sensing Images
+
+DOI：https://doi.org/10.3390/rs16071169
 
 这个程序实现了自动化裁剪，识别，拼接并转化为shp文件，其核心是Transformers模型
 
@@ -94,5 +98,27 @@ python MyDataProcess/result_process.py ./dataset/crop_256
 echo $(date +%T)
 
 ```
+## 引文
+
+如果您使用此代码进行研究，请引用我们的论文。
+
+```
+"""
+@Article{rs16071169,
+AUTHOR = {Yao, Shunyu and Wang, Han and Su, Yalu and Li, Qing and Sun, Tao and Liu, Changjun and Li, Yao and Cheng, Deqiang},
+TITLE = {A Renovated Framework of a Convolution Neural Network with Transformer for Detecting Surface Changes from High-Resolution Remote-Sensing Images},
+JOURNAL = {Remote Sensing},
+VOLUME = {16},
+YEAR = {2024},
+NUMBER = {7},
+ARTICLE-NUMBER = {1169},
+URL = {https://www.mdpi.com/2072-4292/16/7/1169},
+ISSN = {2072-4292},
+DOI = {10.3390/rs16071169}
+}
+"""
+```
+
+
 
 
