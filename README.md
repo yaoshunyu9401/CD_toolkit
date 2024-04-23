@@ -1,14 +1,14 @@
-# Transformers变化检测网络模型说明（change detection）
+# Transformers for change detection in remote sensing images（change detection）
 
-## 程序说明
-该存储库包含复制论文所需的所有代码：
+## Program description
+This repository contains all the code needed to reproduce the paper:
 A Renovated Framework of a Convolution Neural Network with Transformer for Detecting Surface Changes from High-Resolution Remote-Sensing Images
 
 DOI：https://doi.org/10.3390/rs16071169
 
-这个程序实现了自动化裁剪，识别，拼接并转化为shp文件，其核心是Transformers模型
+This program implements automated cropping, recognition, splicing and conversion into shp files. The network uses the CNN-Transformers architecture.
 
-程序出现bug请联系yaoshunyu9401@gmail.com
+If you have any questions please contactyaoshunyu9401@gmail.com
 
 
 ![image](./images/network.png)
@@ -25,17 +25,19 @@ gdal  3.4.3
 tifffile 
 ```
 
-## 数据说明
+## Data description
 数据集内有两个区县2022年和2023年的遥感影像，还有IWHR_data数据集。数据集分享链接如下
 
 链接：https://pan.baidu.com/s/1lh1yuX_DC7M9tpKl2S_s8A 
 提取码：4cix
 
-### 数据准备
+The link has expired. If you need data, please contact the author.
+
+### data preparation
 
 ```
 """
-两期影像的文件夹在dateset内；
+The folders of the two periods of remote sensing images are in the dateset folder.；
 ├─T1
 ├─T2
 ├─label
@@ -46,13 +48,13 @@ tifffile
 
 `T2`: t2 phase;
 
-`label`: label maps, 如果执行预测在此文件夹下放入名称与T1和T2同名的图像文件
-，行列大小与T1和T2同名的图像文件一致，此图像不参与预测;
+`label`: label maps, if prediction is performed, image files with the same name as T1 and T2 will be placed in this folder.
+, the row and column size is consistent with the image files with the same name as T1 and T2, this image does not participate in prediction;
 
 `crop_256`: contains `A, B, label, List and predict`, 
-此文件夹及其内容可以自动生成，最终预测结果的shp文件也会放在此文件夹下.
+This folder and its contents can be automatically generated, and the shp file of the final prediction result will also be placed under this folder.
 
-### 数据集结构
+### Dataset structure
 
 ```
 """
@@ -65,18 +67,17 @@ Change detection data set with pixel-level binary labels；
 ```
 
 
-## 运行脚本说明
+## Instructions for running the script
 
 ### Predict
+Find the training script `run_server.sh` in the `scripts` folder. This script integrates automatic cropping.
+Obtain the cropped picture list, read the data and perform forward propagation prediction, assign coordinate splicing to the predicted image spots, and
+Convert to shp file, filter out smaller patches, and realize automatic patch extraction and processing of remote sensing images
 
-在文件夹下`scripts`找到训练脚本`run_server.sh` , 这个脚本集合了自动裁剪，
-获取裁剪后的图片列表，读取数据并进行前向传播预测，对预测后的图斑赋予坐标拼接，并
-转化为shp文件，过滤掉较小的图斑，实现对遥感影像的自动化图斑提取处理
+You can run `sh scripts/run_server.sh` in the terminal (note: check the python environment and path, path
+It must be consistent with the python project).
 
-可以在terminal中运行 `sh scripts/run_server.sh` (注意：检查python环境和路径，路径
-要和python项目一致).
-
-`run_server.sh` 内详细内容如下:
+ The details in `run_server.sh` are as follows
 
 ```cmd
 #!/usr/bin/env bash
@@ -98,9 +99,9 @@ python MyDataProcess/result_process.py ./dataset/crop_256
 echo $(date +%T)
 
 ```
-## 引文
+## citation
 
-如果您使用此代码进行研究，请引用我们的论文。
+If you use this code for research, please cite our paper.
 
 ```
 """
